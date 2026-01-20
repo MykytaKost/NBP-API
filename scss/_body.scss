@@ -1,0 +1,45 @@
+// Resetowanie i podstawowe style
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background: linear-gradient(135deg, $very-light-green 0%, $white 100%);
+  color: $text-dark;
+  min-height: 100vh;
+  padding: 20px;
+  line-height: 1.6;
+
+  @media (max-width: $tablet) {
+    padding: 15px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 10px;
+  }
+}
+
+// Nagłówek h1
+h1 {
+  text-align: center;
+  color: $primary-green;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $tablet) {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}

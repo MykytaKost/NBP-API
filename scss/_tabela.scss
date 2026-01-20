@@ -1,0 +1,88 @@
+// Tabela
+#currencyTable {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse; // Usuwa odstępy między komórkami tabeli
+  @include box-shadow;
+
+  @media (max-width: $tablet) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 0.8rem;
+  }
+
+  thead {
+    background-color: $secondary-green;
+    color: $white;
+
+    tr th {
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      @media (max-width: $tablet) {
+        padding: 12px;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 10px 8px;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid lighten($light-green, 20%);
+      @include transition(background-color);
+
+      &:hover {
+        background-color: $very-light-green;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        padding: 12px 15px;
+
+        @media (max-width: $tablet) {
+          padding: 10px 12px;
+        }
+
+        @media (max-width: $mobile) {
+          padding: 8px;
+        }
+
+        &:first-child {
+          font-weight: 500;
+          color: $primary-green;
+        }
+
+        &:nth-child(2) {
+          font-weight: 600;
+          color: $secondary-green;
+
+          @media (max-width: $mobile) {
+            font-size: 0.85rem;
+          }
+        }
+
+        &:last-child {
+          font-weight: 700;
+          color: $accent-green;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
