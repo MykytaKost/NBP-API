@@ -1,3 +1,5 @@
+@use 'variable' as *;
+
 // Resetowanie i podstawowe style
 * {
   margin: 0;
@@ -25,7 +27,6 @@ body {
   }
 }
 
-// Nagłówek h1
 h1 {
   text-align: center;
   color: $primary-green;

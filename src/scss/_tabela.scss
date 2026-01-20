@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use 'variable' as *;
+@use 'mixins' as *;
+
 // Tabela
 #currencyTable {
   width: 100%;
@@ -6,7 +10,7 @@
   background-color: $white;
   border-radius: 10px;
   overflow: hidden;
-  border-collapse: collapse; // Usuwa odstępy między komórkami tabeli
+  border-collapse: collapse;
   @include box-shadow;
 
   @media (max-width: $tablet) {
@@ -41,7 +45,7 @@
 
   tbody {
     tr {
-      border-bottom: 1px solid lighten($light-green, 20%);
+      border-bottom: 1px solid color.adjust($light-green, $lightness: 20%);
       @include transition(background-color);
 
       &:hover {

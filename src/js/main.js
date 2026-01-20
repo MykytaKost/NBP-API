@@ -1,3 +1,5 @@
+import "../scss/style.scss";
+
 fetch('https://api.nbp.pl/api/exchangerates/tables/A/?format=json')
 
 .then(response => response.json())
